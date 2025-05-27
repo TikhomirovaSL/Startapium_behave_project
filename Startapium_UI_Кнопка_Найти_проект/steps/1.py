@@ -15,9 +15,7 @@ def setup_browser(context):
     service = Service(driver_path)
     context.browser = webdriver.Chrome(service=service, options=options)
 
-
-# Шаг для открытия веб-сайта
-@given('Website "{url}"')
+@given('Website "{url}"')# Шаг для открытия веб-сайта
 def step_impl(context, url):
     if not url.startswith("http://") and not url.startswith("https://"):
         url = "https://" + url

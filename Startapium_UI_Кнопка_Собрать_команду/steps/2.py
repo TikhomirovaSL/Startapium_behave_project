@@ -18,6 +18,7 @@ def setup_browser(context):
     service = Service(driver_path)
     context.browser = webdriver.Chrome(service=service, options=options)
 
+
 @given('Website "{url}"')
 def step_impl(context, url):
     if not url.startswith("http://") and not url.startswith("https://"):

@@ -2,6 +2,7 @@ import requests
 from behave import given, when, then
 import json
 
+
 @given('URL API-запрос "{url}"')
 def step_given_url(context, url):
     context.url = url

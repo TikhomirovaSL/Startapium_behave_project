@@ -21,7 +21,6 @@ def step_when_send_request_with_params(context):
     print(f"URL: {context.response.url}")  # Показываем финальный URL с параметрами
     print("===========================")
 
-
 @then('Получен статус-код 200')
 def step_then_check_status(context):
     assert context.response.status_code == 200, f"Ожидался статус-код 200, но получен {context.response.status_code}"
