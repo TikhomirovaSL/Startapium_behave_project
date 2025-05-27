@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 # Настройка браузера
 def setup_browser(context):
     driver_path = r"C:\Users\rassa\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\yandexdriver.exe"
@@ -43,6 +42,4 @@ def step_impl(context, text):
     )
     result = context.browser.find_element(By.XPATH, f'//span[contains(text(), "{text}")]')
     assert result.is_displayed()
-
-    # Закрываем браузер после теста
-    context.browser.quit()
+    context.browser.quit()# Закрываем браузер после теста

@@ -14,7 +14,6 @@ def step_given_set_params(context):
     for row in context.table:
         context.params[row['ключ']] = row['значение']
 
-
 @when('Пользователь отправляет GET-запрос с параметрами')
 def step_when_send_request_with_params(context):
     context.response = requests.get(context.url, params=context.params)

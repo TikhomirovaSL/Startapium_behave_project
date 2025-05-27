@@ -26,6 +26,7 @@ def step_when_send_request_with_params(context):
 def step_then_check_status(context):
     assert context.response.status_code == 200, f"Ожидался статус-код 200, но получен {context.response.status_code}"
 
+
 @then('В ответе есть данные статьи/статей: id, title и status')
 def step_then_check_response_content(context):
     response_json = context.response.json()
